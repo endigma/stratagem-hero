@@ -2,7 +2,6 @@
 	import { Direction, type Code } from "$lib/game"
 	import { createEventDispatcher } from "svelte"
 	import ArrowDirection from "./ArrowDirection.svelte"
-	import { button } from "$lib/styles/button"
 
 	export let input: Code
 
@@ -10,7 +9,17 @@
 		i: Direction.Up,
 		k: Direction.Down,
 		j: Direction.Left,
-		l: Direction.Right
+		l: Direction.Right,
+
+		w: Direction.Up,
+		s: Direction.Down,
+		a: Direction.Left,
+		d: Direction.Down,
+
+		up: Direction.Up,
+		down: Direction.Down,
+		left: Direction.Left,
+		right: Direction.Right
 	}
 
 	const dispatch = createEventDispatcher<{
