@@ -16,10 +16,10 @@
 		a: Direction.Left,
 		d: Direction.Right,
 
-		up: Direction.Up,
-		down: Direction.Down,
-		left: Direction.Left,
-		right: Direction.Right
+		ArrowUp: Direction.Up,
+		ArrowDown: Direction.Down,
+		ArrowLeft: Direction.Left,
+		ArrowRight: Direction.Right
 	}
 
 	const dispatch = createEventDispatcher<{
@@ -29,7 +29,7 @@
 	}>()
 
 	function onKeyDown(event: KeyboardEvent) {
-		// console.log(event)
+		console.log(event)
 
 		if (event.key === "Escape" || event.key === "Backspace") {
 			event.preventDefault()
