@@ -68,22 +68,24 @@
 </script>
 
 <div class="h-screen flex flex-col">
-	<div class="flex-grow content overflow-auto">
-		<div class="flex flex-col">
-			<span>{state}</span>
-			<span>
-				Score: {streak}
-			</span>
-			<span>
-				{countdown} Seconds remaining!
-			</span>
+	<div class="flex-grow overflow-auto">
+		<div class="content">
+			<div class="flex flex-col">
+				<span>{state}</span>
+				<span>
+					Score: {streak}
+				</span>
+				<span>
+					{countdown} Seconds remaining!
+				</span>
+			</div>
+
+			<StratagemDisplay {input} stratagem={gem} />
+
+			{#if state === "Failed"}
+				<small>Press space or escape to reset</small>
+			{/if}
 		</div>
-
-		<StratagemDisplay {input} stratagem={gem} />
-
-		{#if state === "Failed"}
-			<small>Press space or escape to reset</small>
-		{/if}
 	</div>
 	<InputDrawer on:reset={reset} on:direction={onDirection} {input} />
 </div>
