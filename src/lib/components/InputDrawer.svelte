@@ -14,7 +14,7 @@
 		w: Direction.Up,
 		s: Direction.Down,
 		a: Direction.Left,
-		d: Direction.Down,
+		d: Direction.Right,
 
 		up: Direction.Up,
 		down: Direction.Down,
