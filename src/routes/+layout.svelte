@@ -9,7 +9,15 @@
 	<title>Stratagem Hero</title>
 </svelte:head>
 
-<slot />
+<div class="h-screen flex flex-col">
+	<div class="flex flex-row items-center gap-2">
+		<h4 class="h4">gamemodes</h4>
+		<a href="freeplay" class="link">freeplay</a>
+		<a href="timeattack" class="link">time attack</a>
+	</div>
+
+	<slot />
+</div>
 
 <style global>
 	:global(body) {
@@ -30,5 +38,9 @@
 
 	:global(.dark-theme) {
 		color-scheme: dark;
+	}
+
+	.link {
+		--at-apply: "text-accent11 hover:underline";
 	}
 </style>
