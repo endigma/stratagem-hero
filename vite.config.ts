@@ -1,7 +1,7 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import extractorSvelte from '@unocss/extractor-svelte';
-import uno from 'unocss/vite';
-import { defineConfig } from 'vitest/config';
+import { sveltekit } from "@sveltejs/kit/vite"
+import extractorSvelte from "@unocss/extractor-svelte"
+import uno from "unocss/vite"
+import { defineConfig } from "vitest/config"
 
 export default defineConfig({
 	plugins: [
@@ -9,13 +9,13 @@ export default defineConfig({
 			extractors: [extractorSvelte],
 			content: {
 				pipeline: {
-					include: ['./**/*.svelte', './src/lib/styles/*.ts']
+					include: ["./**/*.svelte", "./src/lib/styles/*.ts"]
 				}
 			}
 		}),
 		sveltekit()
 	],
 	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
+		include: ["src/**/*.{test,spec}.{js,ts}"]
 	}
-});
+})

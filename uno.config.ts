@@ -6,7 +6,7 @@ import { presetRadix, type RadixColors } from "unocss-preset-radix"
 const palette: RadixColors[] = ["sage", "jade", "red"]
 const aliases: { [key: string]: RadixColors } = {
 	accent: "jade",
-	base: "sage",
+	base: "sage"
 }
 
 export default defineConfig({
@@ -16,9 +16,9 @@ export default defineConfig({
 			darkSelector: ":root",
 			lightSelector: "never",
 			palette: palette,
-			aliases: aliases,
+			aliases: aliases
 		}),
-		presetIcons(),
+		presetIcons()
 	],
 	theme: {
 		zIndex: {
@@ -26,8 +26,8 @@ export default defineConfig({
 			floating: 5,
 			overlay: 10,
 			modal: 20,
-			top: 100,
-		},
+			top: 100
+		}
 	},
 	shortcuts: {
 		h1: "text-4xl font-semibold",
@@ -37,14 +37,14 @@ export default defineConfig({
 		h5: "text-lg font-semibold",
 		h6: "font-semibold",
 
-		content: "max-w-4xl mx-auto px-6 py-10",
+		content: "max-w-7xl w-full mx-auto px-6 py-10"
 	},
 	safelist: [
 		...Array.from({ length: 10 }, (_, i) => `p-${i + 1}`),
 		...Array.from({ length: 10 }, (_, i) => `mr-${i + 1}`),
 		...Array.from({ length: 10 }, (_, i) => `ml-${i + 1}`),
 		...palette.map((p) => `hue-${p}`),
-		...Object.keys(aliases).map((a) => `hue-${a}`),
+		...Object.keys(aliases).map((a) => `hue-${a}`)
 	],
-	transformers: [transformerVariantGroup(), transformerDirectives()],
+	transformers: [transformerVariantGroup(), transformerDirectives()]
 })

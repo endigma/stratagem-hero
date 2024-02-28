@@ -6,12 +6,12 @@ export const input = cva(
 	{
 		variants: {
 			size: {
-				md: ["px-3", "h-8", "text-sm"],
-			},
+				md: ["px-3", "h-8", "text-sm"]
+			}
 		},
 
 		defaultVariants: {
-			size: "md",
-		},
-	},
+			size: "md"
+		}
+	}
 )
