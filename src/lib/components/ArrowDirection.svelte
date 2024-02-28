@@ -5,7 +5,7 @@
 	export let direction: Direction
 	export let pressed: boolean = false
 
-	let size = 48
+	export let size = 48
 	let strokeWidth = 2
 </script>
 
